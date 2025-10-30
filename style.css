@@ -1,0 +1,316 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #0c0c0c;
+    color: #fff;
+    line-height: 1.6;
+}
+
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 70px;
+    background-color: #101010;
+    position: sticky;
+    top: 0;
+}
+
+.logo {
+    font-weight: 800;
+    font-size: 1.8rem;
+    color: #ff7300;
+    letter-spacing: 2px;
+}
+
+.logo span {
+    color: #fff;
+}
+
+nav a {
+    color: #fff;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #ff7300;
+}
+
+
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 80px 70px;
+    background: linear-gradient(135deg, #0f0f0f, #141414);
+    flex-wrap: wrap;
+}
+
+.hero-text {
+    flex: 1;
+    max-width: 500px;
+}
+
+.hero-text h2 {
+    font-size: 3rem;
+    font-weight: 800;
+    color: #ff7300;
+    margin-bottom: 15px;
+}
+
+.hero-text p {
+    color: #ddd;
+    font-size: 1.1rem;
+}
+
+.price {
+    display: block;
+    font-size: 1.8rem;
+    margin: 20px 0;
+    font-weight: 700;
+}
+
+.btn {
+    background: #ff7300;
+    color: #fff;
+    border: none;
+    padding: 14px 35px;
+    font-weight: 700;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background: #fff;
+    color: #000;
+}
+
+.hero-img img {
+    width: 380px;
+    border-radius: 10px;
+    filter: drop-shadow(0 0 15px #ff7300);
+}
+
+
+.features {
+    display: flex;
+    justify-content: space-around;
+    padding: 50px 0;
+    background-color: #111;
+    text-align: center;
+    flex-wrap: wrap;
+}
+
+.feature {
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin: 10px;
+}
+
+
+.details {
+    text-align: center;
+    padding: 70px 80px;
+    background-color: #0c0c0c;
+}
+
+.details h3 {
+    font-size: 2rem;
+    color: #ff7300;
+    margin-bottom: 20px;
+}
+
+.details p {
+    max-width: 700px;
+    margin: auto;
+    color: #ccc;
+    font-size: 1.1rem;
+}
+
+
+.reviews {
+    background-color: #111;
+    padding: 70px 60px;
+    text-align: center;
+}
+
+.reviews h3 {
+    color: #ff7300;
+    margin-bottom: 40px;
+    font-size: 2rem;
+}
+
+.review {
+    background: #1a1a1a;
+    padding: 20px;
+    margin: 15px auto;
+    max-width: 600px;
+    border-radius: 12px;
+    border: 1px solid #222;
+}
+
+.review span {
+    display: block;
+    margin-top: 10px;
+    color: #999;
+    font-size: 0.9rem;
+}
+
+
+.footer {
+    background-color: #0f0f0f;
+    text-align: center;
+    padding: 25px;
+    color: #888;
+    font-size: 0.9rem;
+}
+
+
+
+
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+
+.hero-text {
+    animation: fadeInUp 1s ease-out forwards;
+}
+
+.hero-img img {
+    animation: fadeIn 1.2s ease-out forwards;
+}
+
+.features .feature {
+    opacity: 0;
+    animation: fadeInUp 1s ease-out forwards;
+}
+
+.features .feature:nth-child(1) {
+    animation-delay: 0.2s;
+}
+
+.features .feature:nth-child(2) {
+    animation-delay: 0.4s;
+}
+
+.features .feature:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+.features .feature:nth-child(4) {
+    animation-delay: 0.8s;
+}
+
+.review {
+    opacity: 0;
+    animation: fadeInUp 1.2s ease-out forwards;
+}
+
+.review:nth-child(2) {
+    animation-delay: 0.4s;
+}
+
+
+
+
+
+
+@media (max-width: 1024px) {
+    .hero {
+        flex-direction: column-reverse;
+        text-align: center;
+        padding: 60px 40px;
+    }
+
+    .hero-img img {
+        width: 300px;
+        margin-bottom: 20px;
+    }
+
+    .hero-text h2 {
+        font-size: 2.3rem;
+    }
+
+    nav {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .features {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .details,
+    .reviews {
+        padding: 40px 20px;
+    }
+
+    .btn {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-text p {
+        font-size: 1rem;
+    }
+
+    .price {
+        font-size: 1.4rem;
+    }
+
+    .review {
+        font-size: 0.95rem;
+    }
+
+    .logo {
+        font-size: 1.4rem;
+    }
+
+    .footer {
+        font-size: 0.8rem;
+    }
+}
+
+
+
+.hero-img img:hover {
+    transform: scale(1.05);
+    transition: 0.4s ease;
+}
+
+.btn:hover {
+    transform: scale(1.08);
+}
